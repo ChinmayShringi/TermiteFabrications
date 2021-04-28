@@ -13,6 +13,8 @@ import { TopNavbarComponent } from './views/top-navbar/top-navbar.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [
     UserService

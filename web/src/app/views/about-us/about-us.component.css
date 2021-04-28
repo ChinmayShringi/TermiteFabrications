@@ -2,19 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
-.middle {
-  transition: .5s ease;
-  opacity: 1;
-  position: absolute;
-  top: 40%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: start;
-  background-color: #f2f2f2;
-  border-top: 3px solid red
-}
-
 .container:hover .middle {
   opacity: 1
 }
@@ -33,7 +20,7 @@
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: rgb(255, 255, 255);
   padding: 0;
   margin: 0
 }
@@ -57,7 +44,7 @@
   font-weight: 400;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: #000
+  color: rgb(255, 255, 255)
 }
 
 #parallax-world-of-ugg p {
@@ -87,7 +74,7 @@
 }
 
 #parallax-world-of-ugg .title {
-  background: #fff;
+  color: #fff;
   padding: 60px;
   margin: 0 auto;
   text-align: center
@@ -269,7 +256,6 @@ section {
 }
 
 body {
-  margin: 0;
   font-family: Merriweather, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
@@ -756,11 +742,6 @@ h6 {
   }
 }
 
-body,
-html {
-  width: 100%;
-  height: 100%
-}
 
 .page-section {
   padding: 8rem 0

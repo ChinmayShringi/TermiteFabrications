@@ -32,18 +32,14 @@ export class TopNavbarComponent implements OnInit {
     });
   
     // Activate scrollspy to add active class to navbar items on scroll
-    // $('body').scrollspy({
-    //   target: '#mainNav',
-    //   offset: 75
-    // });
   
     // Collapse Navbar
     var navbarCollapse = function() {
-      if ($("#mainNav").offset().top > 100) {
+      // if ($("#mainNav").offset().top > 100) {
         $("#mainNav").addClass("navbar-scrolled");
-      } else {
-        $("#mainNav").removeClass("navbar-scrolled");
-      }
+      // } else {
+      //   $("#mainNav").removeClass("navbar-scrolled");
+      // }
     };
     // Collapse now if page is not at top
     navbarCollapse();
