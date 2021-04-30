@@ -15,6 +15,8 @@ import { ContactComponent } from './views/contact/contact.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     ContactComponent,
     AboutUsComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     AngularFirestoreModule,
     FontAwesomeModule,
     BrowserAnimationsModule
