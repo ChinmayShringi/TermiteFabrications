@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { BuildHomeComponent } from './views/build-home/build-home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     ContactComponent,
     AboutUsComponent,
     DashboardComponent,
+    BuildHomeComponent,
   ],
   imports: [
     BrowserModule,

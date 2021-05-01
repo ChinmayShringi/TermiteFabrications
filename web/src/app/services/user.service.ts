@@ -21,13 +21,14 @@ export class UserService {
     public ngZone: NgZone //
   ) {
     this.afAuth.authState.subscribe((user) => {
+      console.log(user);
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user') || ' ');
+        JSON.parse(localStorage.getItem('user')!);
       } else {
         localStorage.setItem('user', '');
-        JSON.parse(localStorage.getItem('user') || ' ');
+        JSON.parse(localStorage.getItem('user')!);
       }
     });
   }
@@ -73,8 +74,13 @@ export class UserService {
 
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user') || ' ');
+    try{
+      console.log(JSON.parse(localStorage.getItem('user')!));
+      const user = JSON.parse(localStorage.getItem('user')!);
     return user !== ' ' && user.emailVerified !== false ? true : false;
+    } catch(e){
+      return false;
+    }
   }
 
   // Sign in with Google
@@ -87,10 +93,10 @@ export class UserService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result: any) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['/home']);
-        });
         this.SetUserData(result.user);
+        this.ngZone.run(() => {
+          this.router.navigate(['/dashboard']);
+        });
       })
       .catch((error: any) => {
         window.alert(error);
