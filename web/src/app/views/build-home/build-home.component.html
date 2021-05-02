@@ -1,1 +1,38 @@
-<p>build-home works!</p>
+<top-navbar></top-navbar>
+<div class="container" style="margin-top: 7rem;">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Please enter the link below</h3>
+                  <p class="text-muted">Our 3D modeling tool is under maintainance you can use: <a href="https://www.vectary.com/" target="_blank">Vectary</a></p>
+                  <form (submit)="onSubmit()">
+                  <div class="form-group input-material">
+                    <div class="row">
+                      <div class="col-8">
+                        <input type="text" placeholder="Vectary Link" name="Name" [(ngModel)]="vLink" class="form-control" id="name-field" required>
+                        </div>
+                      <div class="col-2">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                    </div>
+                  </form>
+                  <span *ngIf="isShow">
+                    <p class="text-muted">Is the model displayed blow correct?</p>
+                  <a href="#" class="btn btn-success">Add to Cart</a>
+                  <a routerLink='/contact' class="btn btn-primary mx-3">Contact Us</a>
+                </span>
+                </div> 
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <iframe
+      id="d6c1f27d-6a27-4c7e-bd7d-bd19d7faa56c"
+      [src]="fLink"
+      frameborder="0"
+      width="100%"
+      height="480"></iframe>
+    </div>
+</div>

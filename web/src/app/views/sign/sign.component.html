@@ -10,14 +10,24 @@
       <top-navbar></top-navbar>
     <form class="login">
       <p class="title">Log in</p>
+      <div class="container" >
+        <div class="row my-2 py-2">
+          <label class="my-2" for="userType">I am a:</label>
+          <select [(ngModel)]="userType" name="userType" class="btn btn-primary dropdown-toggle" id="userType" required>
+            <option class="dropdwn" value="1">Customer</option>
+            <option class="dropdwn" value="2">Supplier</option>
+            <option class="dropdwn" value="3">Architect</option>
+          </select>
+        </div>
+    </div>
       <div class="container" (click)="authCalled()">
         <div class="row">
           <p><i class="fa fa-google"></i> Join Us With Google</p>
         </div>
     </div>
-      <button>
+      <button [ngStyle]="{'display': this.isShow?'': 'none'}" (click)="call()">
         <i class="spinner"></i>
-        <span class="state">Log in</span>
+        <span class="state" >Log in</span>
       </button>
     </form>
   </div>

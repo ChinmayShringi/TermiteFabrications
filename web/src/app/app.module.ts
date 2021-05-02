@@ -8,7 +8,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
 import { SignComponent } from './views/sign/sign.component';
-import { UserService } from './services/user.service';
+import { UserService } from './shared/services/user.service';
 import { TopNavbarComponent } from './views/top-navbar/top-navbar.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { ContactComponent } from './views/contact/contact.component';
@@ -18,7 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { BuildHomeComponent } from './views/build-home/build-home.component';
-
+import { FormsModule } from '@angular/forms';
+import { CartComponent } from './views/cart/cart.component';
+import { HouseBillComponent } from './views/house-bill/house-bill.component';
+import { AdminComponent } from './views/admin/admin.component';
+import { SuppliesComponent } from './views/supplies/supplies.component';
+import { ArchitectComponent } from './views/architect/architect.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +35,11 @@ import { BuildHomeComponent } from './views/build-home/build-home.component';
     AboutUsComponent,
     DashboardComponent,
     BuildHomeComponent,
+    CartComponent,
+    HouseBillComponent,
+    AdminComponent,
+    SuppliesComponent,
+    ArchitectComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +48,8 @@ import { BuildHomeComponent } from './views/build-home/build-home.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     UserService
