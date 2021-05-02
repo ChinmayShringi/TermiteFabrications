@@ -32,6 +32,10 @@ export class UserService {
       return false;
     }
   }
+  getUID(){
+    const user = JSON.parse(localStorage.getItem('user')!) as User;
+    return user.uid;
+  }
 
   setLocal(user:User){
     if(this.isSignedOut){

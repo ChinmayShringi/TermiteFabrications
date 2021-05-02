@@ -8,6 +8,7 @@ import { BuildHomeComponent } from './views/build-home/build-home.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
+import { HouseBillComponent } from './views/house-bill/house-bill.component';
 import { SignComponent } from './views/sign/sign.component';
 import { SuppliesComponent } from './views/supplies/supplies.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'sup', component: SuppliesComponent , canActivate: [AuthGuard]},
   { path: 'buildHome', component: BuildHomeComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'houseBill', component: HouseBillComponent   },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 ];
 
