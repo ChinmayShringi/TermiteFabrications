@@ -1,80 +1,79 @@
 
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mx-5 p-3" >Company name</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mx-5 p-3" routerLink="/home">TermiteFabs</a>
     </nav>
-
-    <div class="container-fluid">
-      <div class="row">
+    <div class="container-fluid pr-0" style="padding-left: 0;padding-right: 0;">
+      <div class="row pr-0" style="padding-left: 0;padding-right: 0;">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Dashboard <span class="sr-only">(current)</span>
+                <a class="nav-link active" routerLinkActive=" ">
+                  <i class="fa fa-dashboard mr-5"></i>
+                  Dashboard 
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-archive mr-5"></i>
                   Orders
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="shopping-cart"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-home mr-5"></i>
                   Products
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="users"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-user mr-5"></i>
                   Customers
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="bar-chart-2"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-book mr-5"></i>
                   Reports
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-plus-circle mr-5"></i>
                   Integrations
                 </a>
               </li>
             </ul>
 
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <h6 class="mb-3 sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Saved reports</span>
-              <a class="d-flex align-items-center text-muted" href="#">
-                <span data-feather="plus-circle"></span>
+              <a class="d-flex align-items-center text-muted" >
+                <i class="fa fa-file"></i>
               </a>
             </h6>
             <ul class="nav flex-column mb-2">
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-calendar mr-5"></i>
                   Current month
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-calendar-check-o mr-5"></i>
                   Last quarter
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-user mr-5"></i>
                   Social engagement
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
+                <a class="nav-link" >
+                  <i class="fa fa-globe  mr-5"></i>
                   Year-end sale
                 </a>
               </li>
@@ -86,6 +85,49 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
           </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="card mb-3" style="max-width: 12rem;">
+                  <div class="card-body cardAdmin text-center">
+                    <i class="fa fa-title fa-users" style="color: rgb(48, 165, 255);"></i>
+                    <p class="card-title ">{{users.length}}</p>
+                    <div class="cardTitle text-muted ">Users</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-3" style="max-width: 12rem;">
+                  <div class="card-body cardAdmin text-center">
+                    <i class="fa fa-title fa-sitemap" style="color: rgb(255, 181, 62);"></i>
+                    <p class="card-title">26</p>
+                    <div class="cardTitle text-muted ">Supplies</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-3" style="max-width: 12rem;">
+                  <div class="card-body cardAdmin text-center">
+                    <i class="fa fa-title fa-archive" style="color: rgb(30, 191, 174);"></i>
+                    <p class="card-title">16</p>
+                    <div class="cardTitle text-muted ">Orders</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-3" style="max-width: 12rem;">
+                  <div class="card-body cardAdmin text-center">
+                    <i class="fa fa-title fa-home" style="color:rgb(249, 36, 63)"></i>
+                    <p class="card-title">12</p>
+                    <div class="cardTitle text-muted ">Designs</div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
           <div class="my-4" style="display: block">
             <canvas baseChart
                     [datasets]="barChartData"
@@ -109,12 +151,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                <tr *ngFor="let user of users;let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{user.displayName}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.uid}}</td>
+                  <td>{{user.utype==1?'Customer':user.utype==2?'Supplier':'Architect'}}</td>
                 </tr>
               </tbody>
             </table>

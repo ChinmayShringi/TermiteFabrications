@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/shared/services/admin.service';
+import { User } from 'src/app/shared/services/user';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-admin',
@@ -6,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor() { }
+  users:User[]
+  constructor(private adminService:AdminService,public userService:UserService) { }
   public barChartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -22,6 +25,12 @@ export class AdminComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
   ngOnInit(): void {
+    this.loadData();
+  }
+  async loadData(){
+    this.adminService.addItem.then((val)=>{
+      this.users=val;
+    })
   }
 
 }

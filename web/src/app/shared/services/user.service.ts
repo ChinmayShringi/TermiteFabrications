@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class UserService {
+  userT=["Customer","Suplier","Architect"];
   userData: User={};
   isSignedOut:boolean=true;
   constructor(
@@ -18,10 +19,9 @@ export class UserService {
     private firestore: AngularFirestore,
     public afs: AngularFirestore, // Inject Firestore service
     public router: Router,
-    public ngZone: NgZone //
+    public ngZone: NgZone 
   ) {}
   userType:number=0;
-
   // Returns true when user is looged in 
   get isLoggedIn(): boolean {
     try{
