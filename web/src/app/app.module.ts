@@ -20,10 +20,12 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { BuildHomeComponent } from './views/build-home/build-home.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './views/cart/cart.component';
+import { ChartsModule } from 'ng2-charts';
 import { HouseBillComponent } from './views/house-bill/house-bill.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { SuppliesComponent } from './views/supplies/supplies.component';
 import { ArchitectComponent } from './views/architect/architect.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,8 @@ import { ArchitectComponent } from './views/architect/architect.component';
     AngularFirestoreModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+      BrowserModule,
+      ChartsModule,
     FormsModule
   ],
   providers: [
