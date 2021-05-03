@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { BuildHomeComponent } from './views/build-home/build-home.component';
+import { BuildHomeComponent } from './views/buildHome/build-home/build-home.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './views/cart/cart.component';
 import { ChartsModule } from 'ng2-charts';
@@ -26,6 +26,12 @@ import { AdminComponent } from './views/admin/admin.component';
 import { SuppliesComponent } from './views/supplies/supplies.component';
 import { ArchitectComponent } from './views/architect/architect.component';
 import { RouterModule } from '@angular/router';
+import { BuilderComponent } from './views/buildHome/builder/builder.component';
+
+import {DialogModule} from 'primeng/dialog';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import {ToastModule} from 'primeng/toast';
+import {ConfirmationService} from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +48,13 @@ import { RouterModule } from '@angular/router';
     AdminComponent,
     SuppliesComponent,
     ArchitectComponent,
+    BuilderComponent,
   ],
   imports: [
+    ToastModule,
     BrowserModule,
+    DialogModule,
+    ConfirmPopupModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
@@ -56,7 +66,8 @@ import { RouterModule } from '@angular/router';
     FormsModule
   ],
   providers: [
-    UserService
+    UserService,
+    ConfirmationService
   ],
   bootstrap: [AppComponent]
 })

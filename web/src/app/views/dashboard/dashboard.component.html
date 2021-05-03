@@ -21,9 +21,9 @@
                         <div class="mt-3">
                           <h4>{{ user.displayName }}</h4>
                           <p class="text-secondary mb-1">{{userTp}}</p>
-                          <button class="btn btn-primary" *ngIf="this.ind==1" routerLink='/cprod'>View Cart</button>
-                          <button class="btn btn-primary" *ngIf="this.ind==2" routerLink='/cprod'>View Supplies</button>
-                          <button class="btn btn-primary" *ngIf="this.ind==3" routerLink='/cprod'>View House</button>
+                          <button class="btn btn-primary" *ngIf="this.ind==1" routerLink='/cart'>View Cart</button>
+                          <button class="btn btn-primary" *ngIf="this.ind==2" routerLink='/sup'>View Supplies</button>
+                          <button class="btn btn-primary" *ngIf="this.ind==3" routerLink='/arch'>View House</button>
                           <button class="btn btn-outline-primary mx-3" (click)="authService.SignOut()">LogOut</button>
                         </div>
                       </div>

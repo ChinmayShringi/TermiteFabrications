@@ -10,8 +10,6 @@ import { House } from './house';
 export class HouseService {
   isSignedOut:boolean=true;
   constructor(
-    private afAuth: AngularFireAuth,
-    private firestore: AngularFirestore,
     public afs: AngularFirestore, // Inject Firestore service
     public router: Router,
     public ngZone: NgZone 
