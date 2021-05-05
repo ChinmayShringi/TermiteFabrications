@@ -29,6 +29,9 @@ export class BuildHomeComponent implements OnInit {
     this.houseService.submitHouse(this.userService.getUID()!,this.vLink)
     this.router.navigate(['/houseBill']);
   }
+  openBuilder(){
+    this.router.navigate(['/houseBuild']);
+  }
 
   ngOnInit(): void {
   }

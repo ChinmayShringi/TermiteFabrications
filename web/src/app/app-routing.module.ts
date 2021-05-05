@@ -5,6 +5,7 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { ArchitectComponent } from './views/architect/architect.component';
 import { BuildHomeComponent } from './views/buildHome/build-home/build-home.component';
+import { BuilderComponent } from './views/buildHome/builder/builder.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'sup', component: SuppliesComponent , canActivate: [AuthGuard]},
   { path: 'buildHome', component: BuildHomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'houseBill', component: HouseBillComponent   },
+  { path: 'houseBill', component: HouseBillComponent },
+  { path: 'houseBuild', component: BuilderComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 ];
 

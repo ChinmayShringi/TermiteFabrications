@@ -4,8 +4,9 @@
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h3>Please enter the link below</h3>
-                  <p class="text-muted">Our 3D modeling tool is under maintainance you can use: <a href="https://www.vectary.com/" target="_blank">Vectary</a></p>
+                  <h3>Please enter the link below</h3>
+                    <button class="btn btn-primary m-2" (click)="openBuilder()">Open Builder</button>
+                    <p class="text-muted">Or you can use: <a href="https://www.vectary.com/" target="_blank">Vectary</a></p>
                   <form (submit)="onSubmit()">
                   <div class="form-group input-material">
                     <div class="row">
