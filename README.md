@@ -2,6 +2,18 @@
 E-Construction webapplication to provide a platform for supplier, architect, admin and the user who wants to build their desired home.
 
 
+## Some ScreenShots
+## Home
+![Alt text](ss/ss1.png "Home")
+The logo is of eve from the movie: Wall-E.
+
+## 3D Home Builder
+![Alt text](ss/ss3.png "Home Builder")
+This page uses three.js to create 3D objects in the browser itself.
+
+## Web AR
+![Alt text](ss/ss2.png "AR QR")
+The QR will open the 3D object in your mobile phone and can be viewed in AR.
 
 
 # License
